@@ -10,6 +10,12 @@ This allows you to define elegant, re-usable and composable components for your 
 
 ## Usage
 
+Install this package using npm / yarn.
+
+```console
+yarn add grafana-jsx
+```
+
 The recommended way to use this package is with JSX in your codebase. This can be achieved by using the [@babel/plugin-transform-react-jsx](https://babeljs.io/docs/en/babel-plugin-transform-react-jsx) plugin to use this repositories custom JSX pragma.
 
 Add the babel plugin to your codebase:
