@@ -78,7 +78,7 @@ yarn install --frozen-lockfile
 yarn build
 ```
 
-### Test
+### Test
 
 ```console
 yarn test
@@ -90,7 +90,7 @@ yarn test
 yarn lint
 ```
 
-## Contributing
+## Contributing
 
 Please check out the [CONTRIBUTING](./docs/CONTRIBUTING.md) docs.
 
