@@ -24,7 +24,7 @@
     "build": "cross-env BABEL_ENV=node rollup -c server.rollup.js",
     "lint": "eslint ./src",
     "test": "jest",
-    "prepublish": "yarn ci"
+    "prepublishOnly": "yarn ci"
   },
   "dependencies": {
     "prop-types": "^15.7.2"
