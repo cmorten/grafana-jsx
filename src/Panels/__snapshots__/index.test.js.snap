@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Panels when passed Panel children should render 1`] = `
+Object {
+  "panels": Array [
+    Object {
+      "test-panel-prop": Symbol(test-panel-value),
+    },
+    Object {
+      "test-panel-prop": Symbol(test-panel-value),
+    },
+  ],
+}
+`;
+
+exports[`Panels when passed no Panel children should render 1`] = `
+Object {
+  "panels": Array [],
+}
+`;

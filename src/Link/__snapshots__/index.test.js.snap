@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Link when passed all props should render a custom link 1`] = `
+Object {
+  "icon": "test-icon",
+  "tags": Array [
+    "test-tag-1",
+    "test-tag-2",
+  ],
+  "type": "test-type",
+}
+`;
+
+exports[`Link when passed custom props should render a custom link with the custom props 1`] = `
+Object {
+  "icon": "test-icon",
+  "tags": Array [
+    "test-tag-1",
+    "test-tag-2",
+  ],
+  "test-link-prop": Symbol(test-link-value),
+  "type": "test-type",
+}
+`;
+
+exports[`Link when passed no props should render a link with defaults 1`] = `
+Object {
+  "icon": "external link",
+  "tags": Array [],
+  "type": "dashboards",
+}
+`;

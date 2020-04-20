@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dashboard when passed all props should render 1`] = `
+Object {
+  "editable": false,
+  "graphTooltip": 2,
+  "hideControls": true,
+  "id": null,
+  "refresh": "test-refresh",
+  "style": "dark",
+  "tags": Array [
+    "test-tag-1",
+    "test-tag-2",
+  ],
+  "test-annotations": Object {
+    "test-annotation": Object {},
+  },
+  "test-links": Object {},
+  "test-panels": Object {},
+  "test-templates": Object {},
+  "test-time": Object {},
+  "test-timepicker": Object {},
+  "timezone": "browser",
+  "title": "test-title",
+  "uid": "test-uid",
+}
+`;
+
+exports[`Dashboard when passed children should render 1`] = `
+Object {
+  "editable": true,
+  "graphTooltip": 0,
+  "hideControls": false,
+  "id": null,
+  "style": "dark",
+  "tags": Array [],
+  "test-annotations": Object {
+    "test-annotation": Object {},
+  },
+  "test-child": Object {
+    "test-child-prop": Symbol(test-child-value),
+  },
+  "test-links": Object {},
+  "test-panels": Object {},
+  "test-templates": Object {},
+  "test-time": Object {},
+  "test-timepicker": Object {},
+  "timezone": "browser",
+  "title": "test-title",
+}
+`;
+
+exports[`Dashboard when passed required props and props which don't have defaults should render 1`] = `
+Object {
+  "editable": true,
+  "graphTooltip": 0,
+  "hideControls": false,
+  "id": null,
+  "refresh": "test-refresh",
+  "style": "dark",
+  "tags": Array [],
+  "test-annotations": Object {
+    "test-annotation": Object {},
+  },
+  "test-links": Object {},
+  "test-panels": Object {},
+  "test-templates": Object {},
+  "test-time": Object {},
+  "test-timepicker": Object {},
+  "timezone": "browser",
+  "title": "test-title",
+  "uid": "test-uid",
+}
+`;
+
+exports[`Dashboard when passed required props should render 1`] = `
+Object {
+  "editable": true,
+  "graphTooltip": 0,
+  "hideControls": false,
+  "id": null,
+  "style": "dark",
+  "tags": Array [],
+  "test-annotations": Object {
+    "test-annotation": Object {},
+  },
+  "test-links": Object {},
+  "test-panels": Object {},
+  "test-templates": Object {},
+  "test-time": Object {},
+  "test-timepicker": Object {},
+  "timezone": "browser",
+  "title": "test-title",
+}
+`;

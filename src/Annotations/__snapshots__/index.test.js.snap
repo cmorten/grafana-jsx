@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Annotations when used in isolation when passed children should render an annotations object containing an annotation 1`] = `
+Object {
+  "list": Array [
+    Object {
+      "test-annotation-prop": "test-annotation-value",
+    },
+  ],
+}
+`;
+
+exports[`Annotations when used in isolation when passed no children should render an annotations object containing an empty list 1`] = `
+Object {
+  "list": Array [],
+}
+`;
+
+exports[`Annotations when used within another object when passed children should add an annotations object containing an annotation to the outer object 1`] = `
+Object {
+  "annotations": Object {
+    "list": Array [
+      Object {
+        "test-annotation-prop": "test-annotation-value",
+      },
+    ],
+  },
+}
+`;
+
+exports[`Annotations when used within another object when passed no children should add an annotations object containing an empty list to the outer object 1`] = `
+Object {
+  "annotations": Object {
+    "list": Array [],
+  },
+}
+`;

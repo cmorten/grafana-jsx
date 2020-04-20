@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Annotation when passed additional props should render a custom Annotation with the additional props 1`] = `
+Object {
+  "builtIn": 0,
+  "datasource": "test-datasource",
+  "enable": false,
+  "hide": false,
+  "iconColor": "test-colour",
+  "name": "test-name",
+  "test-annotation-prop": Symbol(test-annotation-value),
+  "type": "test-type",
+}
+`;
+
+exports[`Annotation when passed all props should render a custom Annotation 1`] = `
+Object {
+  "builtIn": 0,
+  "datasource": "test-datasource",
+  "enable": false,
+  "hide": false,
+  "iconColor": "test-colour",
+  "name": "test-name",
+  "type": "test-type",
+}
+`;
+
+exports[`Annotation when passed no props should render a default Annotation 1`] = `
+Object {
+  "builtIn": 1,
+  "datasource": "-- Grafana --",
+  "enable": true,
+  "hide": true,
+  "iconColor": "rgba(0, 211, 255, 1)",
+  "name": "Annotations & Alerts",
+  "type": "dashboard",
+}
+`;

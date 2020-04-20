@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Time when used in isolation when passed all props should render a custom time object 1`] = `
+Object {
+  "from": "test-from",
+  "to": "test-to",
+}
+`;
+
+exports[`Time when used in isolation when passed no props should render the default time object 1`] = `
+Object {
+  "from": "now-6h",
+  "to": "now",
+}
+`;
+
+exports[`Time when used within another object when passed all props should add a custom time object to the outer object 1`] = `
+Object {
+  "time": Object {
+    "from": "test-from",
+    "to": "test-to",
+  },
+}
+`;
+
+exports[`Time when used within another object when passed no props should add a default time object to the outer object 1`] = `
+Object {
+  "time": Object {
+    "from": "now-6h",
+    "to": "now",
+  },
+}
+`;

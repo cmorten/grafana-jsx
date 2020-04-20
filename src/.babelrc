@@ -1,0 +1,27 @@
+{
+  "presets": ["@babel/preset-env"],
+  "plugins": [
+    [
+      "@babel/plugin-transform-react-jsx",
+      {
+        "pragma": "jsx"
+      }
+    ],
+    [
+      "babel-plugin-jsx-pragmatic",
+      {
+        "module": "jsx",
+        "import": "jsx"
+      }
+    ],
+    [
+      "babel-plugin-module-resolver",
+      {
+        "root": ["./src"],
+        "alias": {
+          "jsx": "./src/createObject.js"
+        }
+      }
+    ]
+  ]
+}

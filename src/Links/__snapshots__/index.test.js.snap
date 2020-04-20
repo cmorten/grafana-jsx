@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Links when passed Link children should render 1`] = `
+Object {
+  "links": Array [
+    Object {
+      "test-link-prop": Symbol(test-link-value),
+    },
+    Object {
+      "test-link-prop": Symbol(test-link-value),
+    },
+  ],
+}
+`;
+
+exports[`Links when passed no Link children should render 1`] = `
+Object {
+  "links": Array [],
+}
+`;

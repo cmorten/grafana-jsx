@@ -1,0 +1,111 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TimePicker when used in isolation when passed all props should render a custom timepicker object 1`] = `
+Object {
+  "collapse": true,
+  "enable": false,
+  "notice": true,
+  "now": false,
+  "refresh_intervals": Array [
+    "test-refresh-interval-1",
+    "test-refresh-interval-2",
+  ],
+  "status": "test-status",
+  "time_options": Array [
+    "test-time-option-1",
+    "test-time-option-2",
+  ],
+  "type": "test-type",
+}
+`;
+
+exports[`TimePicker when used in isolation when passed no props should render the default timepicker object 1`] = `
+Object {
+  "collapse": false,
+  "enable": true,
+  "notice": false,
+  "now": true,
+  "refresh_intervals": Array [
+    "5s",
+    "10s",
+    "30s",
+    "1m",
+    "5m",
+    "15m",
+    "30m",
+    "1h",
+    "2h",
+    "1d",
+  ],
+  "status": "Stable",
+  "time_options": Array [
+    "5m",
+    "15m",
+    "1h",
+    "6h",
+    "12h",
+    "24h",
+    "2d",
+    "7d",
+    "30d",
+  ],
+  "type": "timepicker",
+}
+`;
+
+exports[`TimePicker when used within another object when passed all props should add a custom timepicker object to the outer object 1`] = `
+Object {
+  "timepicker": Object {
+    "collapse": true,
+    "enable": false,
+    "notice": true,
+    "now": false,
+    "refresh_intervals": Array [
+      "test-refresh-interval-1",
+      "test-refresh-interval-2",
+    ],
+    "status": "test-status",
+    "time_options": Array [
+      "test-time-option-1",
+      "test-time-option-2",
+    ],
+    "type": "test-type",
+  },
+}
+`;
+
+exports[`TimePicker when used within another object when passed no props should add a default timepicker object to the outer object 1`] = `
+Object {
+  "timepicker": Object {
+    "collapse": false,
+    "enable": true,
+    "notice": false,
+    "now": true,
+    "refresh_intervals": Array [
+      "5s",
+      "10s",
+      "30s",
+      "1m",
+      "5m",
+      "15m",
+      "30m",
+      "1h",
+      "2h",
+      "1d",
+    ],
+    "status": "Stable",
+    "time_options": Array [
+      "5m",
+      "15m",
+      "1h",
+      "6h",
+      "12h",
+      "24h",
+      "2d",
+      "7d",
+      "30d",
+    ],
+    "type": "timepicker",
+  },
+}
+`;

@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Templates when used in isolation when passed children should render a templating object containing a template 1`] = `
+Object {
+  "enable": true,
+  "list": Array [
+    Object {
+      "test-template-prop": "test-template-value",
+    },
+    Object {
+      "test-template-prop": "test-template-value",
+    },
+  ],
+}
+`;
+
+exports[`Templates when used in isolation when passed no children should render a templating object containing an empty list 1`] = `
+Object {
+  "enable": true,
+  "list": Array [],
+}
+`;
+
+exports[`Templates when used within another object when passed children should add a templating object containing a template to the outer object 1`] = `
+Object {
+  "templating": Object {
+    "enable": true,
+    "list": Array [
+      Object {
+        "test-template-prop": "test-template-value",
+      },
+      Object {
+        "test-template-prop": "test-template-value",
+      },
+    ],
+  },
+}
+`;
+
+exports[`Templates when used within another object when passed no children should add a templating object containing an empty list to the outer object 1`] = `
+Object {
+  "templating": Object {
+    "enable": true,
+    "list": Array [],
+  },
+}
+`;

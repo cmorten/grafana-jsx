@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Panel when passed all props should render a custom panel 1`] = `
+Object {
+  "gridPos": Object {
+    "h": 18,
+    "w": 24,
+    "x": 0,
+    "y": 0,
+  },
+  "type": "test-type",
+}
+`;
+
+exports[`Panel when passed custom props should render a custom panel with the custom props 1`] = `
+Object {
+  "gridPos": Object {
+    "h": 18,
+    "w": 24,
+    "x": 0,
+    "y": 0,
+  },
+  "test-panel-prop": Symbol(test-panel-value),
+  "type": "test-type",
+}
+`;
+
+exports[`Panel when passed required props should render a default panel with required props 1`] = `
+Object {
+  "gridPos": Object {
+    "h": 9,
+    "w": 12,
+    "x": 0,
+    "y": 0,
+  },
+  "type": "test-type",
+}
+`;

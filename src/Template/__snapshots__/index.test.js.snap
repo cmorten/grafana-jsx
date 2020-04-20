@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Template when passed additional props should render a custom Template with the additional props 1`] = `
+Object {
+  "allFormat": "test-all-format",
+  "allValue": "test-all-value",
+  "current": Object {
+    "selected": true,
+    "text": "test-current-text",
+    "value": "test-current-value",
+  },
+  "datasource": "test-datasource",
+  "definition": "test-definition",
+  "hide": 0,
+  "includeAll": true,
+  "label": "test-label",
+  "multi": true,
+  "multiFormat": "test-multi-format",
+  "name": "test-name",
+  "options": Array [
+    "test-option-1",
+    "test-option-2",
+  ],
+  "query": "test-query",
+  "refresh": 0,
+  "regex": "test-regex",
+  "skipUrlSync": true,
+  "sort": 0,
+  "tagValuesQuery": "test-tag-values-query",
+  "tags": Array [
+    "test-tag-1",
+    "test-tag-2",
+  ],
+  "tagsQuery": "test-tags-query",
+  "test-template-prop": "test-template-value",
+  "type": "test-type",
+  "useTags": true,
+}
+`;
+
+exports[`Template when passed all props should render a custom Template 1`] = `
+Object {
+  "allFormat": "test-all-format",
+  "allValue": "test-all-value",
+  "current": Object {
+    "selected": true,
+    "text": "test-current-text",
+    "value": "test-current-value",
+  },
+  "datasource": "test-datasource",
+  "definition": "test-definition",
+  "hide": 0,
+  "includeAll": true,
+  "label": "test-label",
+  "multi": true,
+  "multiFormat": "test-multi-format",
+  "name": "test-name",
+  "options": Array [
+    "test-option-1",
+    "test-option-2",
+  ],
+  "query": "test-query",
+  "refresh": 0,
+  "regex": "test-regex",
+  "skipUrlSync": true,
+  "sort": 0,
+  "tagValuesQuery": "test-tag-values-query",
+  "tags": Array [
+    "test-tag-1",
+    "test-tag-2",
+  ],
+  "tagsQuery": "test-tags-query",
+  "type": "test-type",
+  "useTags": true,
+}
+`;
+
+exports[`Template when passed no props should render a default Template 1`] = `
+Object {
+  "allFormat": null,
+  "allValue": null,
+  "hide": 0,
+  "includeAll": false,
+  "label": null,
+  "multi": false,
+  "options": Array [],
+  "refresh": 0,
+  "skipUrlSync": false,
+  "sort": 0,
+  "tags": Array [],
+  "useTags": false,
+}
+`;
