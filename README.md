@@ -39,7 +39,7 @@ You can then use JSX Pragma comments to use the `grafana-jsx` `createObject` met
 import { Dashboard, createObject } from "grafana-jsx";
 
 const CustomDashboard = (
-  <Dashboard {...requiredDashboardProps}>
+  <Dashboard title={"my-dashboard"}>
     <Panels>
       <Panel type={"text"} x={0} y={0} />
       <Panel type={"text"} x={0} y={9} />
