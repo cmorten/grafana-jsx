@@ -44,7 +44,7 @@ const checkProps = (component, componentObject) => {
   }
 };
 
-function createObject(component, props, ...children) {
+const createObject = (component, props, ...children) => {
   if (typeof component === "undefined" || component === null) {
     return null;
   }
@@ -83,6 +83,6 @@ function createObject(component, props, ...children) {
   });
 
   return componentObject;
-}
+};
 
 export default createObject;

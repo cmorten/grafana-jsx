@@ -1,3 +1,7 @@
+/**
+ * REF: https://grafana.com/docs/grafana/latest/reference/dashboard/#annotations
+ */
+
 import PropTypes from "prop-types";
 
 const Annotation = ({

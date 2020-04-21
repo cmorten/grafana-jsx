@@ -1,5 +1,15 @@
 # ChangeLog
 
+## [1.1.0] - 21-04-2020
+
+### Added
+
+- Added createGrafanaJsxString for creating JSX from a Grafana dashboard JSON object.
+
+### Updated
+
+- Updated readme with details of usage and interfaces.
+
 ## [1.0.0] - 20-04-2020
 
 ### Added
