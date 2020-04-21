@@ -9,6 +9,7 @@ import Template from "./Template";
 import Templates from "./Templates";
 import Time from "./Time";
 import TimePicker from "./TimePicker";
+import createGrafanaJsxString from "./createGrafanaJsxString";
 import createObject from "./createObject";
 
 export {
@@ -23,5 +24,6 @@ export {
   Templates,
   Time,
   TimePicker,
+  createGrafanaJsxString,
   createObject,
 };
