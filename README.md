@@ -392,7 +392,7 @@ const myDashboard = (
 
 See the [Grafana dashboard JSON documentation](https://grafana.com/docs/grafana/latest/reference/dashboard/#json-fields) for further details.
 
-#### Link
+#### Link
 
 Creates a link object.
 
