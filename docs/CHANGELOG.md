@@ -1,6 +1,13 @@
 # ChangeLog
 
-## [1.2.1] - 26-02-2020
+## [1.2.2] - 26-04-2020
+
+### Updated
+
+- Touch-ups to the Docs.
+- Ensure `yarn.lock` is shipped in package.
+
+## [1.2.1] - 26-04-2020
 
 ### Updated
 
