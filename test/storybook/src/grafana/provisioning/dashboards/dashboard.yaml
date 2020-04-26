@@ -1,0 +1,11 @@
+apiVersion: 1
+
+providers:
+  - name: "Grafana JSX Storybook"
+    orgId: 1
+    folder: ""
+    type: file
+    editable: true
+    disableDeletion: false
+    options:
+      path: /etc/grafana/dashboards

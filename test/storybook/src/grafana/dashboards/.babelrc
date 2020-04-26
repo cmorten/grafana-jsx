@@ -1,5 +1,5 @@
 {
-  "extends": "../.babelrc",
+  "extends": "../../../.babelrc",
   "plugins": [
     [
       "@babel/plugin-transform-react-jsx",
@@ -11,7 +11,7 @@
     [
       "babel-plugin-jsx-pragmatic",
       {
-        "module": "jsx",
+        "module": "local-lib-grafana-jsx",
         "import": "jsx",
         "export": "createObject"
       },
@@ -20,7 +20,7 @@
     [
       "babel-plugin-jsx-pragmatic",
       {
-        "module": "jsx",
+        "module": "local-lib-grafana-jsx",
         "import": "jsxFrag",
         "export": "Fragment"
       },
@@ -30,7 +30,7 @@
       "babel-plugin-module-resolver",
       {
         "alias": {
-          "jsx": "./src/jsxJson.js"
+          "local-lib-grafana-jsx": "../../lib/index.es5.js"
         }
       }
     ]

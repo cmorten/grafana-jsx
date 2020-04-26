@@ -1,0 +1,48 @@
+{
+  "env": {
+    "es6": true,
+    "node": true,
+    "jest": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:import/recommended",
+    "plugin:jest/recommended",
+    "prettier"
+  ],
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "plugins": ["import", "react", "jest", "prettier"],
+  "rules": {
+    "import/no-extraneous-dependencies": "error",
+    "no-underscore-dangle": "error",
+    "no-console": "warn",
+    "import/prefer-default-export": "off",
+    "import/no-named-as-default": "off",
+    "linebreak-style": "off",
+    "prettier/prettier": "error",
+    "complexity": ["error", { "max": 5 }],
+    "import/unambiguous": "off",
+    "prefer-const": "error",
+    "no-var": "error",
+    "react/jsx-key": "error",
+    "react/jsx-no-comment-textnodes": "error",
+    "react/jsx-no-duplicate-props": "error",
+    "react/jsx-no-target-blank": "error",
+    "react/jsx-no-undef": "error",
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error",
+    "react/jsx-sort-default-props": "error",
+    "react/jsx-sort-props": "error",
+    "jest/no-identical-title": "warn"
+  },
+  "settings": {
+    "import/resolver": {
+      "babel-module": {}
+    }
+  }
+}

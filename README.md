@@ -34,22 +34,33 @@ And update your `.babelrc` to use the JSX babel plugins:
     [
       "@babel/plugin-transform-react-jsx",
       {
-        "pragma": "jsx"
+        "pragma": "jsx",
+        "pragmaFrag": "jsxFrag"
       }
     ],
     [
       "babel-plugin-jsx-pragmatic",
       {
         "module": "grafana-jsx",
-        "import": "createObject",
-        "export": "jsx"
-      }
+        "import": "jsx",
+        "export": "createObject"
+      },
+      "jsx"
+    ],
+    [
+      "babel-plugin-jsx-pragmatic",
+      {
+        "module": "grafana-jsx",
+        "import": "jsxFrag",
+        "export": "Fragment"
+      },
+      "jsxFrag"
     ]
   ]
 }
 ```
 
-You can now use JSX in your codebase and Babel will parse the JSX using the grafana-jsx pragma.
+You can now use JSX and JSX Fragments `<></>` in your codebase and Babel will parse the JSX using the `grafana-jsx` pragmas.
 
 ```jsx
 import { Dashboard } from "grafana-jsx";
@@ -297,11 +308,11 @@ import {
   TimePicker
 } from "grafana-jsx";
 
-const Dashboard = (
+const MyDashboard = (
   ${grafanaJsxString}
 );
 
-export default Dashboard;
+export default MyDashboard;
 `;
 
 fs.writeFile("my-test-dashboard.js", dashboardFileContents, (error) => {

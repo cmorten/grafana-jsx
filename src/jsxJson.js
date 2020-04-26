@@ -5,8 +5,7 @@
  */
 
 import PropTypes from "prop-types";
-
-const JSX_COMPONENT_NAME = Symbol("JSX_COMPONENT_NAME");
+import { JSX_COMPONENT_NAME_KEY, JSX_FRAGEMENT_TYPE } from "./symbols";
 
 const isObject = (objectLike) =>
   typeof objectLike === "object" && objectLike !== null;
@@ -44,6 +43,35 @@ const checkProps = (component, componentObject) => {
   }
 };
 
+const createFragment = (props, children) => {
+  children.forEach((childObject, index) => {
+    props[index] = childObject;
+  });
+
+  return Object.values(props);
+};
+
+const createElement = (component, props, children) => {
+  Object.defineProperty(props, JSX_COMPONENT_NAME_KEY, {
+    configurable: true,
+    enumerable: false,
+    writable: true,
+    value: component,
+  });
+
+  children.forEach((childObject) => {
+    const { [JSX_COMPONENT_NAME_KEY]: objectName } = childObject || {};
+
+    if (objectName) {
+      props[objectName] = childObject;
+    } else {
+      Object.assign(props, childObject);
+    }
+  });
+
+  return props;
+};
+
 const createObject = (component, props, ...children) => {
   if (typeof component === "undefined" || component === null) {
     return null;
@@ -52,37 +80,25 @@ const createObject = (component, props, ...children) => {
   props = parseProps(props);
   children = parseChildren(children);
 
-  const componentObject = {
+  checkProps(component, {
     ...props,
     children,
-  };
-
-  checkProps(component, componentObject);
+  });
 
   if (typeof component === "function") {
-    return component(componentObject);
+    return component({
+      ...props,
+      children,
+    });
   }
 
-  Object.defineProperty(componentObject, JSX_COMPONENT_NAME, {
-    configurable: true,
-    enumerable: false,
-    writable: true,
-    value: component,
-  });
+  delete props.children;
 
-  delete componentObject.children;
+  if (component === JSX_FRAGEMENT_TYPE) {
+    return createFragment(props, children);
+  }
 
-  children.forEach((childObject) => {
-    const { [JSX_COMPONENT_NAME]: objectName } = childObject || {};
-
-    if (objectName) {
-      componentObject[objectName] = childObject;
-    } else {
-      Object.assign(componentObject, childObject);
-    }
-  });
-
-  return componentObject;
+  return createElement(component, props, children);
 };
 
-export default createObject;
+export { createObject, JSX_FRAGEMENT_TYPE as Fragment };

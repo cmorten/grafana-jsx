@@ -8,7 +8,8 @@ import {
   Templates,
   Template,
   createObject,
-} from "../src";
+  Row,
+} from "../../src";
 
 const requiredDashboardProps = {
   title: "test-title",
@@ -31,6 +32,42 @@ describe("Integration", () => {
           </Panels>
         </Dashboard>
       ).toMatchSnapshot();
+    });
+
+    describe("and with custom rows", () => {
+      describe("which are collapsed", () => {
+        it("should create a dashboard with collapsed row panels", () => {
+          expect(
+            <Dashboard {...requiredDashboardProps}>
+              <Panels>
+                <Panel height={1} type={"text"} width={24} x={0} y={0} />
+                <Row collapsed={true} title={"test-row-title"} y={1}>
+                  <Panel height={1} type={"text"} width={24} x={0} y={1} />
+                  <Panel height={1} type={"text"} width={24} x={0} y={2} />
+                </Row>
+                <Panel height={1} type={"text"} width={24} x={0} y={3} />
+              </Panels>
+            </Dashboard>
+          ).toMatchSnapshot();
+        });
+      });
+
+      describe("which are not collapsed", () => {
+        it("should create a dashboard with uncollapsed row panels", () => {
+          expect(
+            <Dashboard {...requiredDashboardProps}>
+              <Panels>
+                <Panel height={1} type={"text"} width={24} x={0} y={0} />
+                <Row collapsed={false} title={"test-row-title"} y={1}>
+                  <Panel height={1} type={"text"} width={24} x={0} y={1} />
+                  <Panel height={1} type={"text"} width={24} x={0} y={2} />
+                </Row>
+                <Panel height={1} type={"text"} width={24} x={0} y={3} />
+              </Panels>
+            </Dashboard>
+          ).toMatchSnapshot();
+        });
+      });
     });
   });
 
