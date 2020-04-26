@@ -8,13 +8,14 @@ import {
   Links,
   Panel,
   Panels,
+  Row,
   Template,
   Templates,
   Time,
   TimePicker,
   createGrafanaJsxString,
   createObject,
-} from "../src";
+} from "../../src";
 
 describe("Integration: createGrafanaJsxString", () => {
   describe("when given a default dashboard JSON", () => {
@@ -59,6 +60,14 @@ describe("Integration: createGrafanaJsxString", () => {
             <Panels>
               <Panel type={"test-type-1"} x={0} y={0} />
               <Panel type={"test-type-2"} x={0} y={9} />
+              <Row collapsed={false} y={18}>
+                <Panel type={"test-type-3"} x={0} y={18} />
+                <Panel type={"test-type-4"} x={0} y={27} />
+              </Row>
+              <Row collapsed={true} y={36}>
+                <Panel type={"test-type-3"} x={0} y={36} />
+                <Panel type={"test-type-4"} x={0} y={45} />
+              </Row>
             </Panels>
             <Templates>
               <Template />
@@ -79,9 +88,16 @@ describe("Integration: createGrafanaJsxString", () => {
 <Panels>
 <Panel type={"test-type-1"} x={0} y={0} width={12} height={9} />
 <Panel type={"test-type-2"} x={0} y={9} width={12} height={9} />
+<Row collapsed={false} y={18} />
+<Panel type={"test-type-3"} x={0} y={18} width={12} height={9} />
+<Panel type={"test-type-4"} x={0} y={27} width={12} height={9} />
+<Row collapsed={true} y={36}>
+<Panel type={"test-type-3"} x={0} y={36} width={12} height={9} />
+<Panel type={"test-type-4"} x={0} y={45} width={12} height={9} />
+</Row>
 </Panels>
 <Templates enable={true}>
-<Template allFormat={null} allValue={null} hide={0} includeAll={false} label={null} multi={false} options={[]} refresh={0} skipUrlSync={false} sort={0} tags={[]} useTags={false} />
+<Template allFormat={null} allValue={null} current={{}} datasource={null} definition={""} hide={0} includeAll={false} index={-1} label={""} multi={false} name={""} options={[]} query={""} refresh={2} regex={""} skipUrlSync={false} sort={1} tags={[]} tagsQuery={""} tagValuesQuery={""} type={null} useTags={false} />
 </Templates>
 <Time from={"now-12h"} to={"now-6h"} />
 <TimePicker collapse={false} enable={true} notice={false} now={true} refresh_intervals={["5s","10s","30s","1m","5m","15m","30m","1h","2h","1d"]} status={"Stable"} time_options={["5m","15m","1h","6h","12h","24h","2d","7d","30d"]} type={"timepicker"} />

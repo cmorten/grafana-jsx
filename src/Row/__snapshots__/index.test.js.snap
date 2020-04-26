@@ -1,0 +1,639 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Row when used in isolation when passed Panel children and the panel is collapsed when passed all props should render a custom row 1`] = `
+Object {
+  "collapsed": true,
+  "datasource": "test-datasource",
+  "gridPos": Object {
+    "h": 1,
+    "w": 24,
+    "x": 0,
+    "y": 0,
+  },
+  "options": Object {
+    "test-option-key": "test-option-value",
+  },
+  "test-panels": Array [
+    Object {
+      "test-panel-prop": Symbol(test-panel-value),
+    },
+    Object {
+      "test-panel-prop": Symbol(test-panel-value),
+    },
+  ],
+  "title": "test-title",
+  "type": "row",
+}
+`;
+
+exports[`Row when used in isolation when passed Panel children and the panel is collapsed when passed custom props should render a custom row with the custom props 1`] = `
+Object {
+  "collapsed": true,
+  "datasource": "test-datasource",
+  "gridPos": Object {
+    "h": 1,
+    "w": 24,
+    "x": 0,
+    "y": 0,
+  },
+  "options": Object {
+    "test-option-key": "test-option-value",
+  },
+  "test-panels": Array [
+    Object {
+      "test-panel-prop": Symbol(test-panel-value),
+    },
+    Object {
+      "test-panel-prop": Symbol(test-panel-value),
+    },
+  ],
+  "test-row-prop": Symbol(test-row-value),
+  "title": "test-title",
+  "type": "row",
+}
+`;
+
+exports[`Row when used in isolation when passed Panel children and the panel is collapsed when passed required props should render a default row with required props 1`] = `
+Object {
+  "collapsed": true,
+  "gridPos": Object {
+    "h": 1,
+    "w": 24,
+    "x": 0,
+    "y": 0,
+  },
+  "test-panels": Array [
+    Object {
+      "test-panel-prop": Symbol(test-panel-value),
+    },
+    Object {
+      "test-panel-prop": Symbol(test-panel-value),
+    },
+  ],
+  "type": "row",
+}
+`;
+
+exports[`Row when used in isolation when passed Panel children and the panel is not collapsed when passed all props should render a custom row 1`] = `
+Array [
+  Object {
+    "collapsed": false,
+    "datasource": "test-datasource",
+    "gridPos": Object {
+      "h": 1,
+      "w": 24,
+      "x": 0,
+      "y": 0,
+    },
+    "options": Object {
+      "test-option-key": "test-option-value",
+    },
+    "test-panels": Array [],
+    "title": "test-title",
+    "type": "row",
+  },
+  Object {
+    "test-panel-prop": Symbol(test-panel-value),
+  },
+  Object {
+    "test-panel-prop": Symbol(test-panel-value),
+  },
+]
+`;
+
+exports[`Row when used in isolation when passed Panel children and the panel is not collapsed when passed custom props should render a custom row with the custom props 1`] = `
+Array [
+  Object {
+    "collapsed": false,
+    "datasource": "test-datasource",
+    "gridPos": Object {
+      "h": 1,
+      "w": 24,
+      "x": 0,
+      "y": 0,
+    },
+    "options": Object {
+      "test-option-key": "test-option-value",
+    },
+    "test-panels": Array [],
+    "test-row-prop": Symbol(test-row-value),
+    "title": "test-title",
+    "type": "row",
+  },
+  Object {
+    "test-panel-prop": Symbol(test-panel-value),
+  },
+  Object {
+    "test-panel-prop": Symbol(test-panel-value),
+  },
+]
+`;
+
+exports[`Row when used in isolation when passed Panel children and the panel is not collapsed when passed required props should render a default row with required props 1`] = `
+Array [
+  Object {
+    "collapsed": false,
+    "gridPos": Object {
+      "h": 1,
+      "w": 24,
+      "x": 0,
+      "y": 0,
+    },
+    "test-panels": Array [],
+    "type": "row",
+  },
+  Object {
+    "test-panel-prop": Symbol(test-panel-value),
+  },
+  Object {
+    "test-panel-prop": Symbol(test-panel-value),
+  },
+]
+`;
+
+exports[`Row when used in isolation when passed no Panel children when passed all props should render a custom row 1`] = `
+Object {
+  "collapsed": true,
+  "datasource": "test-datasource",
+  "gridPos": Object {
+    "h": 1,
+    "w": 24,
+    "x": 0,
+    "y": 0,
+  },
+  "options": Object {
+    "test-option-key": "test-option-value",
+  },
+  "test-panels": Array [],
+  "title": "test-title",
+  "type": "row",
+}
+`;
+
+exports[`Row when used in isolation when passed no Panel children when passed custom props should render a custom row with the custom props 1`] = `
+Object {
+  "collapsed": true,
+  "datasource": "test-datasource",
+  "gridPos": Object {
+    "h": 1,
+    "w": 24,
+    "x": 0,
+    "y": 0,
+  },
+  "options": Object {
+    "test-option-key": "test-option-value",
+  },
+  "test-panels": Array [],
+  "test-row-prop": Symbol(test-row-value),
+  "title": "test-title",
+  "type": "row",
+}
+`;
+
+exports[`Row when used in isolation when passed no Panel children when passed required props should render a default row with required props 1`] = `
+Array [
+  Object {
+    "collapsed": false,
+    "gridPos": Object {
+      "h": 1,
+      "w": 24,
+      "x": 0,
+      "y": 0,
+    },
+    "test-panels": Array [],
+    "type": "row",
+  },
+]
+`;
+
+exports[`Row when used within another object when passed Panel children and the panel is collapsed when passed all props should render a custom row 1`] = `
+Object {
+  "panel": Object {
+    "collapsed": true,
+    "datasource": "test-datasource",
+    "gridPos": Object {
+      "h": 1,
+      "w": 24,
+      "x": 0,
+      "y": 0,
+    },
+    "options": Object {
+      "test-option-key": "test-option-value",
+    },
+    "test-panels": Array [
+      Object {
+        "test-panel-prop": Symbol(test-panel-value),
+      },
+      Object {
+        "test-panel-prop": Symbol(test-panel-value),
+      },
+    ],
+    "title": "test-title",
+    "type": "row",
+  },
+}
+`;
+
+exports[`Row when used within another object when passed Panel children and the panel is collapsed when passed custom props should render a custom row with the custom props 1`] = `
+Object {
+  "panel": Object {
+    "collapsed": true,
+    "datasource": "test-datasource",
+    "gridPos": Object {
+      "h": 1,
+      "w": 24,
+      "x": 0,
+      "y": 0,
+    },
+    "options": Object {
+      "test-option-key": "test-option-value",
+    },
+    "test-panels": Array [
+      Object {
+        "test-panel-prop": Symbol(test-panel-value),
+      },
+      Object {
+        "test-panel-prop": Symbol(test-panel-value),
+      },
+    ],
+    "test-row-prop": Symbol(test-row-value),
+    "title": "test-title",
+    "type": "row",
+  },
+}
+`;
+
+exports[`Row when used within another object when passed Panel children and the panel is collapsed when passed required props should render a default row with required props 1`] = `
+Object {
+  "panel": Object {
+    "collapsed": true,
+    "gridPos": Object {
+      "h": 1,
+      "w": 24,
+      "x": 0,
+      "y": 0,
+    },
+    "test-panels": Array [
+      Object {
+        "test-panel-prop": Symbol(test-panel-value),
+      },
+      Object {
+        "test-panel-prop": Symbol(test-panel-value),
+      },
+    ],
+    "type": "row",
+  },
+}
+`;
+
+exports[`Row when used within another object when passed Panel children and the panel is not collapsed when passed all props should render a custom row 1`] = `
+Object {
+  "panel": Object {
+    "collapsed": false,
+    "datasource": "test-datasource",
+    "gridPos": Object {
+      "h": 1,
+      "w": 24,
+      "x": 0,
+      "y": 0,
+    },
+    "options": Object {
+      "test-option-key": "test-option-value",
+    },
+    "test-panels": Array [],
+    "title": "test-title",
+    "type": "row",
+  },
+  "test-panel-1": Object {
+    "test-panel-prop": Symbol(test-panel-value),
+  },
+  "test-panel-2": Object {
+    "test-panel-prop": Symbol(test-panel-value),
+  },
+}
+`;
+
+exports[`Row when used within another object when passed Panel children and the panel is not collapsed when passed custom props should render a custom row with the custom props 1`] = `
+Object {
+  "panel": Object {
+    "collapsed": false,
+    "datasource": "test-datasource",
+    "gridPos": Object {
+      "h": 1,
+      "w": 24,
+      "x": 0,
+      "y": 0,
+    },
+    "options": Object {
+      "test-option-key": "test-option-value",
+    },
+    "test-panels": Array [],
+    "test-row-prop": Symbol(test-row-value),
+    "title": "test-title",
+    "type": "row",
+  },
+  "test-panel-1": Object {
+    "test-panel-prop": Symbol(test-panel-value),
+  },
+  "test-panel-2": Object {
+    "test-panel-prop": Symbol(test-panel-value),
+  },
+}
+`;
+
+exports[`Row when used within another object when passed Panel children and the panel is not collapsed when passed required props should render a default row with required props 1`] = `
+Object {
+  "panel": Object {
+    "collapsed": false,
+    "gridPos": Object {
+      "h": 1,
+      "w": 24,
+      "x": 0,
+      "y": 0,
+    },
+    "test-panels": Array [],
+    "type": "row",
+  },
+  "test-panel-1": Object {
+    "test-panel-prop": Symbol(test-panel-value),
+  },
+  "test-panel-2": Object {
+    "test-panel-prop": Symbol(test-panel-value),
+  },
+}
+`;
+
+exports[`Row when used within another object when passed no Panel children when passed all props should render a custom row 1`] = `
+Object {
+  "panel": Object {
+    "collapsed": true,
+    "datasource": "test-datasource",
+    "gridPos": Object {
+      "h": 1,
+      "w": 24,
+      "x": 0,
+      "y": 0,
+    },
+    "options": Object {
+      "test-option-key": "test-option-value",
+    },
+    "test-panels": Array [],
+    "title": "test-title",
+    "type": "row",
+  },
+}
+`;
+
+exports[`Row when used within another object when passed no Panel children when passed custom props should render a custom row with the custom props 1`] = `
+Object {
+  "panel": Object {
+    "collapsed": true,
+    "datasource": "test-datasource",
+    "gridPos": Object {
+      "h": 1,
+      "w": 24,
+      "x": 0,
+      "y": 0,
+    },
+    "options": Object {
+      "test-option-key": "test-option-value",
+    },
+    "test-panels": Array [],
+    "test-row-prop": Symbol(test-row-value),
+    "title": "test-title",
+    "type": "row",
+  },
+}
+`;
+
+exports[`Row when used within another object when passed no Panel children when passed required props should render a default row with required props 1`] = `
+Object {
+  "panel": Object {
+    "collapsed": false,
+    "gridPos": Object {
+      "h": 1,
+      "w": 24,
+      "x": 0,
+      "y": 0,
+    },
+    "test-panels": Array [],
+    "type": "row",
+  },
+}
+`;
+
+exports[`Row when used within another object's array when passed Panel children and the panel is collapsed when passed all props should render a custom row 1`] = `
+Array [
+  Object {
+    "collapsed": true,
+    "datasource": "test-datasource",
+    "gridPos": Object {
+      "h": 1,
+      "w": 24,
+      "x": 0,
+      "y": 0,
+    },
+    "options": Object {
+      "test-option-key": "test-option-value",
+    },
+    "test-panels": Array [
+      Object {
+        "test-panel-prop": Symbol(test-panel-value),
+      },
+      Object {
+        "test-panel-prop": Symbol(test-panel-value),
+      },
+    ],
+    "title": "test-title",
+    "type": "row",
+  },
+]
+`;
+
+exports[`Row when used within another object's array when passed Panel children and the panel is collapsed when passed custom props should render a custom row with the custom props 1`] = `
+Array [
+  Object {
+    "collapsed": true,
+    "datasource": "test-datasource",
+    "gridPos": Object {
+      "h": 1,
+      "w": 24,
+      "x": 0,
+      "y": 0,
+    },
+    "options": Object {
+      "test-option-key": "test-option-value",
+    },
+    "test-panels": Array [
+      Object {
+        "test-panel-prop": Symbol(test-panel-value),
+      },
+      Object {
+        "test-panel-prop": Symbol(test-panel-value),
+      },
+    ],
+    "test-row-prop": Symbol(test-row-value),
+    "title": "test-title",
+    "type": "row",
+  },
+]
+`;
+
+exports[`Row when used within another object's array when passed Panel children and the panel is collapsed when passed required props should render a default row with required props 1`] = `
+Array [
+  Object {
+    "collapsed": true,
+    "gridPos": Object {
+      "h": 1,
+      "w": 24,
+      "x": 0,
+      "y": 0,
+    },
+    "test-panels": Array [
+      Object {
+        "test-panel-prop": Symbol(test-panel-value),
+      },
+      Object {
+        "test-panel-prop": Symbol(test-panel-value),
+      },
+    ],
+    "type": "row",
+  },
+]
+`;
+
+exports[`Row when used within another object's array when passed Panel children and the panel is not collapsed when passed all props should render a custom row 1`] = `
+Array [
+  Object {
+    "collapsed": false,
+    "datasource": "test-datasource",
+    "gridPos": Object {
+      "h": 1,
+      "w": 24,
+      "x": 0,
+      "y": 0,
+    },
+    "options": Object {
+      "test-option-key": "test-option-value",
+    },
+    "test-panels": Array [],
+    "title": "test-title",
+    "type": "row",
+  },
+  Object {
+    "test-panel-prop": Symbol(test-panel-value),
+  },
+  Object {
+    "test-panel-prop": Symbol(test-panel-value),
+  },
+]
+`;
+
+exports[`Row when used within another object's array when passed Panel children and the panel is not collapsed when passed custom props should render a custom row with the custom props 1`] = `
+Array [
+  Object {
+    "collapsed": false,
+    "datasource": "test-datasource",
+    "gridPos": Object {
+      "h": 1,
+      "w": 24,
+      "x": 0,
+      "y": 0,
+    },
+    "options": Object {
+      "test-option-key": "test-option-value",
+    },
+    "test-panels": Array [],
+    "test-row-prop": Symbol(test-row-value),
+    "title": "test-title",
+    "type": "row",
+  },
+  Object {
+    "test-panel-prop": Symbol(test-panel-value),
+  },
+  Object {
+    "test-panel-prop": Symbol(test-panel-value),
+  },
+]
+`;
+
+exports[`Row when used within another object's array when passed Panel children and the panel is not collapsed when passed required props should render a default row with required props 1`] = `
+Array [
+  Object {
+    "collapsed": false,
+    "gridPos": Object {
+      "h": 1,
+      "w": 24,
+      "x": 0,
+      "y": 0,
+    },
+    "test-panels": Array [],
+    "type": "row",
+  },
+  Object {
+    "test-panel-prop": Symbol(test-panel-value),
+  },
+  Object {
+    "test-panel-prop": Symbol(test-panel-value),
+  },
+]
+`;
+
+exports[`Row when used within another object's array when passed no Panel children when passed all props should render a custom row 1`] = `
+Array [
+  Object {
+    "collapsed": true,
+    "datasource": "test-datasource",
+    "gridPos": Object {
+      "h": 1,
+      "w": 24,
+      "x": 0,
+      "y": 0,
+    },
+    "options": Object {
+      "test-option-key": "test-option-value",
+    },
+    "test-panels": Array [],
+    "title": "test-title",
+    "type": "row",
+  },
+]
+`;
+
+exports[`Row when used within another object's array when passed no Panel children when passed custom props should render a custom row with the custom props 1`] = `
+Array [
+  Object {
+    "collapsed": true,
+    "datasource": "test-datasource",
+    "gridPos": Object {
+      "h": 1,
+      "w": 24,
+      "x": 0,
+      "y": 0,
+    },
+    "options": Object {
+      "test-option-key": "test-option-value",
+    },
+    "test-panels": Array [],
+    "test-row-prop": Symbol(test-row-value),
+    "title": "test-title",
+    "type": "row",
+  },
+]
+`;
+
+exports[`Row when used within another object's array when passed no Panel children when passed required props should render a default row with required props 1`] = `
+Array [
+  Object {
+    "collapsed": false,
+    "gridPos": Object {
+      "h": 1,
+      "w": 24,
+      "x": 0,
+      "y": 0,
+    },
+    "test-panels": Array [],
+    "type": "row",
+  },
+]
+`;

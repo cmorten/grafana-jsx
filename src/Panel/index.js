@@ -1,13 +1,15 @@
 import PropTypes from "prop-types";
 
 const Panel = ({
-  type,
-  title,
-  x,
-  y,
-  width: w = 12,
+  children,
+  datasource,
   height: h = 9,
   options,
+  type,
+  title,
+  width: w = 12,
+  x,
+  y,
   ...props
 }) => {
   const gridPos = {
@@ -19,16 +21,21 @@ const Panel = ({
 
   return (
     <panel
+      datasource={datasource}
       gridPos={gridPos}
       options={options}
       title={title}
       type={type}
       {...props}
-    />
+    >
+      {children}
+    </panel>
   );
 };
 
 Panel.PropTypes = {
+  children: PropTypes.any,
+  datasource: PropTypes.string,
   title: PropTypes.string,
   type: PropTypes.string.isRequired,
   x: PropTypes.number.isRequired,

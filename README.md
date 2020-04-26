@@ -1,8 +1,46 @@
 # grafana-jsx
 
+A JSX library for creating JSON for Grafana.
+
+## Contents
+
+<!-- toc -->
+
+- [About](#about)
+- [Usage](#usage)
+  - [Getting Started](#getting-started)
+  - [APIs](#apis)
+    - [createObject](#createobject)
+      - [Options](#options)
+    - [createGrafanaJsxString](#creategrafanajsxstring)
+      - [Options](#options-1)
+  - [Components](#components)
+    - [Annotation](#annotation)
+    - [Annotations](#annotations)
+    - [Dashboard](#dashboard)
+    - [Link](#link)
+    - [Links](#links)
+    - [Panel](#panel)
+    - [Panels](#panels)
+    - [Template](#template)
+    - [Templates](#templates)
+    - [Time](#time)
+    - [TimePicker](#timepicker)
+- [Developing](#developing)
+  - [Install](#install)
+  - [Build](#build)
+  - [Test](#test)
+    - [Unit & Integration Tests](#unit--integration-tests)
+    - [Storybook](#storybook)
+  - [Lint](#lint)
+- [Contributing](#contributing)
+- [Changelog](#changelog)
+
+<!-- tocstop -->
+
 ## About
 
-There are several ways now to write Grafana dashboards as code, but none I've seen as yet which allow you to do so with JSX - a syntax which is now very common for front-end development.
+There are several ways now to write Grafana dashboards as code, but none which allow you to do so with JSX - a syntax which is now very common for front-end development.
 
 This repository provides a JSX pragma for Grafana dashboard JSON creation along with some core Grafana dashboard components that can be used to create dashboards written in JSX.
 
@@ -34,22 +72,33 @@ And update your `.babelrc` to use the JSX babel plugins:
     [
       "@babel/plugin-transform-react-jsx",
       {
-        "pragma": "jsx"
+        "pragma": "jsx",
+        "pragmaFrag": "jsxFrag"
       }
     ],
     [
       "babel-plugin-jsx-pragmatic",
       {
         "module": "grafana-jsx",
-        "import": "createObject",
-        "export": "jsx"
-      }
+        "import": "jsx",
+        "export": "createObject"
+      },
+      "jsx"
+    ],
+    [
+      "babel-plugin-jsx-pragmatic",
+      {
+        "module": "grafana-jsx",
+        "import": "jsxFrag",
+        "export": "Fragment"
+      },
+      "jsxFrag"
     ]
   ]
 }
 ```
 
-You can now use JSX in your codebase and Babel will parse the JSX using the grafana-jsx pragma.
+You can now use JSX and JSX Fragments `<></>` in your codebase and Babel will parse the JSX using the `grafana-jsx` pragmas.
 
 ```jsx
 import { Dashboard } from "grafana-jsx";
@@ -75,7 +124,7 @@ export default MyCustomDashboard;
 Using vanilla JS:
 
 ```js
-import { createObject } from "grafana-jsx";
+import { createObject, Fragment } from "grafana-jsx";
 
 /**
  * Evaluates to:
@@ -137,6 +186,58 @@ const myObjectWithFunctionalComponent = createObject(
   MyFunctionalComponent,
   { myFnProp: "myFnPropValue" },
   [myObjectWithStringComponent]
+);
+
+/**
+ * Fragments enable array-like constructions.
+ */
+
+/**
+ * Used by themselves, sub-components are assigned to an
+ * array.
+ *
+ * Evaluates to:
+ *
+ * [
+ *   {
+ *     "myProp": "myPropValue"
+ *   },
+ *   {
+ *     "myProp": "myPropValue"
+ *   }
+ * ]
+ */
+const myArrayUsingFragments = createObject(
+  Fragment,
+  {},
+  createObject("componentName", { myProp: "myPropValue" }),
+  createObject("componentName", { myProp: "myPropValue" })
+);
+
+/**
+ * Within the scope of an outer object, the Fragment acts
+ * transparently, as if it were not there.
+ *
+ * Evaluates to:
+ *
+ * {
+ *   "componentName1": {
+ *     "myProp": "myPropValue"
+ *   },
+ *   "componentName2": {
+ *     "myProp": "myPropValue"
+ *   }
+ * }
+ */
+const myObjectUsingFragments = createObject(
+  "componentName",
+  {},
+  createObject(
+    Fragment,
+    {},
+    createObject("componentName1", { myProp: "myPropValue" }),
+    createObject("componentName2", { myProp: "myPropValue" })
+  )
 );
 ```
 
@@ -203,15 +304,65 @@ const myObjectWithFunctionalComponent = (
     {myObjectWithStringComponent}
   </MyFunctionalComponent>
 );
+
+/**
+ * Fragments enable array-like constructions.
+ */
+
+/**
+ * Used by themselves, sub-components are assigned to an
+ * array.
+ *
+ * Evaluates to:
+ *
+ * [
+ *   {
+ *     "myProp": "myPropValue"
+ *   },
+ *   {
+ *     "myProp": "myPropValue"
+ *   }
+ * ]
+ */
+const myArrayUsingFragments = (
+  <>
+    <componentName myProp={"myPropValue"} />
+    <componentName myProp={"myPropValue"} />
+  </>
+);
+
+/**
+ * Within the scope of an outer object, the Fragment acts
+ * transparently as if it were not there.
+ *
+ * Evaluates to:
+ *
+ * {
+ *   "componentName1": {
+ *     "myProp": "myPropValue"
+ *   },
+ *   "componentName2": {
+ *     "myProp": "myPropValue"
+ *   }
+ * }
+ */
+const myObjectUsingFragments = (
+  <componentName>
+    <>
+      <componentName1 myProp={"myPropValue"} />
+      <componentName2 myProp={"myPropValue"} />
+    </>
+  </componentName>
+);
 ```
 
 ##### Options
 
-| Argument | Description                                                                                                                                                                                                                                                                                         |
-| -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| type     | A string name or functional component. If a string is provided, the value is set as a key in the parent JSON object (unless this is the top level component, in which case the type is not used). If a functional component is provided, it is evaluated using the provided `props` and `children`. |
-| props    | An object containing the properties that should be assigned against the `type` key in the JSON object.                                                                                                                                                                                              |
-| children | An array of objects. If the object is a plain JSON object, it will be merged into the object assigned against the `type` key. If the object is a component then it will be added to `type` object against a key of the component's name.                                                            |
+| Argument | Description                                                                                                                                                                                                                                                                                                     |
+| -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| type     | A string name, functional component or `Fragment`. If a string is provided, the value is set as a key in the parent JSON object (unless this is the top level component, in which case the type is not used). If a functional component is provided, it is evaluated using the provided `props` and `children`. |
+| props    | An object containing the properties that should be assigned against the `type` key in the JSON object.                                                                                                                                                                                                          |
+| children | An array of objects. If the object is a plain JSON object, it will be merged into the object assigned against the `type` key. If the object is a component then it will be added to `type` object against a key of the component's name.                                                                        |
 
 #### createGrafanaJsxString
 
@@ -291,17 +442,18 @@ import {
   Links,
   Panel,
   Panels,
+  Row,
   Template,
   Templates,
   Time,
   TimePicker
 } from "grafana-jsx";
 
-const Dashboard = (
+const MyDashboard = (
   ${grafanaJsxString}
 );
 
-export default Dashboard;
+export default MyDashboard;
 `;
 
 fs.writeFile("my-test-dashboard.js", dashboardFileContents, (error) => {
@@ -381,7 +533,7 @@ const myDashboard = (
 
 See the [Grafana dashboard JSON documentation](https://grafana.com/docs/grafana/latest/reference/dashboard/#json-fields) for further details.
 
-#### Link
+#### Link
 
 Creates a link object.
 
@@ -542,9 +694,21 @@ yarn build
 
 ### Test
 
+#### Unit & Integration Tests
+
 ```console
 yarn test
 ```
+
+#### Storybook
+
+Start the Grafana JSX Storybook instance:
+
+```console
+yarn storybook
+```
+
+Refer to the [Storybook README](./test/storybook/README.md) for further information.
 
 ### Lint
 

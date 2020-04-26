@@ -5,12 +5,13 @@ import Link from "./Link";
 import Links from "./Links";
 import Panel from "./Panel";
 import Panels from "./Panels";
+import Row from "./Row";
 import Template from "./Template";
 import Templates from "./Templates";
 import Time from "./Time";
 import TimePicker from "./TimePicker";
 import createGrafanaJsxString from "./createGrafanaJsxString";
-import createObject from "./createObject";
+import { createObject, Fragment } from "./jsxJson";
 
 export {
   Annotation,
@@ -20,10 +21,12 @@ export {
   Links,
   Panel,
   Panels,
+  Row,
   Template,
   Templates,
   Time,
   TimePicker,
   createGrafanaJsxString,
   createObject,
+  Fragment,
 };

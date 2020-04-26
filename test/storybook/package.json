@@ -1,0 +1,29 @@
+{
+  "name": "grafana-jsx-storybook",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "build": "yarn clean && babel-node ./src/grafana/dashboards/index.js",
+    "clean": "rimraf ./src/grafana/dashboards/storybook.json",
+    "start": "yarn build && node src/index.js"
+  },
+  "dependencies": {
+    "docker-compose": "^0.23.4",
+    "never-exit": "^1.0.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/node": "^7.8.7",
+    "@babel/plugin-transform-react-jsx": "^7.9.4",
+    "@babel/preset-env": "^7.9.5",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^25.3.0",
+    "babel-plugin-jsx-pragmatic": "^1.0.2",
+    "babel-plugin-module-resolver": "^4.0.0",
+    "cross-env": "^7.0.2",
+    "eslint-import-resolver-babel-module": "^5.1.2",
+    "eslint-plugin-import": "^2.20.2",
+    "rimraf": "^3.0.2"
+  }
+}

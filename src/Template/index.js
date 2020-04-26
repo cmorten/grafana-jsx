@@ -3,25 +3,26 @@ import PropTypes from "prop-types";
 const Template = ({
   allFormat = null,
   allValue = null,
-  current,
-  datasource,
-  definition,
+  current = {},
+  datasource = null,
+  definition = "",
   hide = 0,
   includeAll = false,
-  label = null,
+  index = -1,
+  label = "",
   multi = false,
   multiFormat,
-  name,
+  name = "",
   options = [],
-  query,
-  refresh = 0,
-  regex,
+  query = "",
+  refresh = 2,
+  regex = "",
   skipUrlSync = false,
-  sort = 0,
-  tagValuesQuery,
+  sort = 1,
+  tagValuesQuery = "",
   tags = [],
-  tagsQuery,
-  type,
+  tagsQuery = "",
+  type = null,
   useTags = false,
   ...props
 }) => (
@@ -33,6 +34,7 @@ const Template = ({
     definition={definition}
     hide={hide}
     includeAll={includeAll}
+    index={index}
     label={label}
     multi={multi}
     multiFormat={multiFormat}
@@ -65,6 +67,7 @@ Template.PropTypes = {
   definition: PropTypes.string,
   hide: PropTypes.oneOf([0, 1, 2]),
   includeAll: PropTypes.bool,
+  index: PropTypes.number,
   label: PropTypes.string,
   multi: PropTypes.bool,
   multiFormat: PropTypes.any,
