@@ -1,8 +1,46 @@
 # grafana-jsx
 
+A JSX library for creating JSON for Grafana.
+
+## Contents
+
+<!-- toc -->
+
+- [About](#about)
+- [Usage](#usage)
+  - [Getting Started](#getting-started)
+  - [APIs](#apis)
+    - [createObject](#createobject)
+      - [Options](#options)
+    - [createGrafanaJsxString](#creategrafanajsxstring)
+      - [Options](#options-1)
+  - [Components](#components)
+    - [Annotation](#annotation)
+    - [Annotations](#annotations)
+    - [Dashboard](#dashboard)
+    - [Link](#link)
+    - [Links](#links)
+    - [Panel](#panel)
+    - [Panels](#panels)
+    - [Template](#template)
+    - [Templates](#templates)
+    - [Time](#time)
+    - [TimePicker](#timepicker)
+- [Developing](#developing)
+  - [Install](#install)
+  - [Build](#build)
+  - [Test](#test)
+    - [Unit & Integration Tests](#unit--integration-tests)
+    - [Storybook](#storybook)
+  - [Lint](#lint)
+- [Contributing](#contributing)
+- [Changelog](#changelog)
+
+<!-- tocstop -->
+
 ## About
 
-There are several ways now to write Grafana dashboards as code, but none I've seen as yet which allow you to do so with JSX - a syntax which is now very common for front-end development.
+There are several ways now to write Grafana dashboards as code, but none which allow you to do so with JSX - a syntax which is now very common for front-end development.
 
 This repository provides a JSX pragma for Grafana dashboard JSON creation along with some core Grafana dashboard components that can be used to create dashboards written in JSX.
 
@@ -656,9 +694,21 @@ yarn build
 
 ### Test
 
+#### Unit & Integration Tests
+
 ```console
 yarn test
 ```
+
+#### Storybook
+
+Start the Grafana JSX Storybook instance:
+
+```console
+yarn storybook
+```
+
+Refer to the [Storybook README](./test/storybook/README.md) for further information.
 
 ### Lint
 

@@ -2,7 +2,21 @@
 
 First of all, thanks for taking the time to read this document and contributing to our codebase.
 
-Please read each section carefully:
+Please read each section carefully!
+
+## Contents
+
+<!-- toc -->
+
+- [Getting started](#getting-started)
+- [Working on your feature](#working-on-your-feature)
+  - [Branching](#branching)
+  - [Coding style](#coding-style)
+  - [Unit tests](#unit-tests)
+- [Opening a PR](#opening-a-pr)
+- [Merging and publishing](#merging-and-publishing)
+
+<!-- tocstop -->
 
 ## Getting started
 
