@@ -22,6 +22,7 @@ A JSX library for creating JSON for Grafana.
     - [Links](#links)
     - [Panel](#panel)
     - [Panels](#panels)
+    - [Row](#row)
     - [Template](#template)
     - [Templates](#templates)
     - [Time](#time)
@@ -582,6 +583,20 @@ const myPanels = (
   <Panels>
     <Panel />
   </Panels>
+);
+```
+
+See the [Grafana dashboard Panels documentation](https://grafana.com/docs/grafana/latest/reference/dashboard/#panels) for further details.
+
+#### Row
+
+Creates a panel object of type `row`. Expected to be composed with Panel components.
+
+```jsx
+const myRow = (
+  <Row title={"myRow"} y={0} collapsed={true}>
+    <Panel />
+  </Row>
 );
 ```
 
