@@ -24,10 +24,28 @@ const createPanelJsx = (json) => {
   return createJsx({ ...rest, x, y, width, height }, "Panel", {});
 };
 
+const createRowPanelsJsx = (array) =>
+  array.map((json) => createPanelJsx(json)).join("\n");
+
+const createRowJsx = (json) => {
+  const {
+    gridPos: { y },
+    ...rest
+  } = json;
+
+  delete rest.type;
+
+  return createJsx({ ...rest, y }, "Row", {
+    panels: createRowPanelsJsx,
+  });
+};
+
 const createPanelsJsx = (array) =>
   array.length
     ? `<Panels>\n${array
-        .map((json) => createPanelJsx(json))
+        .map((json) =>
+          json.type === "row" ? createRowJsx(json) : createPanelJsx(json)
+        )
         .join("\n")}\n</Panels>`
     : "<Panels />";
 

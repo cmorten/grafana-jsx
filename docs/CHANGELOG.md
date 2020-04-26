@@ -12,9 +12,10 @@
 
 - Updated `createObject` JSX pragma logic to accomodate `Fragment`.
 - Corrected code in `createGrafanaJsxString` section of readme for variable name clash.
-- Updated getting started section of readme to include adding a `Fragment` pragma.
+- Updated getting started section of readme to include adding a `Fragment` pragma and some usage examples.
 - Updated `Panel` component to expect a `datasource` prop.
 - Updated `Template` component to expect an `index` prop, and set some more defaults.
+- Updated `createGrafanaJsxString` to convert row panels to `Row` JSX components.
 
 ## [1.1.0] - 21-04-2020
 

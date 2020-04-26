@@ -47,6 +47,22 @@ describe("jsxJson", () => {
             });
           });
         });
+
+        describe("and the child is a Fragment containing a child component", () => {
+          it("should return an object containing the Fragment's child object", () => {
+            expect(
+              createObject(
+                mockObjectName,
+                null,
+                createObject(Fragment, null, mockJsxChild)
+              )
+            ).toEqual({
+              [mockJsxChildName]: {
+                ...mockJsxChild,
+              },
+            });
+          });
+        });
       });
     });
 
