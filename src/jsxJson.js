@@ -4,7 +4,7 @@
  * REF: https://github.com/developit/jsxobj
  */
 
-import PropTypes from "prop-types";
+import { checkPropTypes } from "prop-types";
 import { JSX_COMPONENT_NAME_KEY, JSX_FRAGEMENT_TYPE } from "./symbols";
 
 const isObject = (objectLike) =>
@@ -26,20 +26,13 @@ const parseProps = (props) =>
 const parseChildren = (children) => [].concat.apply([], children);
 
 const getComponentName = (component) =>
-  typeof component === "string"
-    ? component
-    : component.displayName || component.name || component.constructor.name;
+  component.displayName || component.name || component.constructor.name;
 
 const checkProps = (component, componentObject) => {
   if (component.PropTypes) {
     const componentName = getComponentName(component);
 
-    PropTypes.checkPropTypes(
-      component.PropTypes,
-      componentObject,
-      "prop",
-      componentName
-    );
+    checkPropTypes(component.PropTypes, componentObject, "prop", componentName);
   }
 };
 

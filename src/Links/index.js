@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-const Links = ({ children = [] }) => ({
+const Links = ({ children }) => ({
   links: children,
 });
 

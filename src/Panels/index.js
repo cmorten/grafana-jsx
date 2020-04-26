@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-const Panels = ({ children = [] }) => ({
+const Panels = ({ children }) => ({
   panels: children,
 });
 

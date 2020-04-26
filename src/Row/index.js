@@ -3,7 +3,7 @@ import Panel from "../Panel";
 import Panels from "../Panels";
 
 const Row = ({
-  children = [],
+  children,
   collapsed = false,
   datasource,
   options,

@@ -1,5 +1,13 @@
 # ChangeLog
 
+## [1.2.1] - 26-02-2020
+
+### Updated
+
+- Refactor to `jsxJson.js`, removing impossible code paths.
+- Refactor components to remove superfluous `children` prop default.
+- Additional unit tests for `jsJson.js` to reach 100% coverage.
+
 ## [1.2.0] - 26-04-2020
 
 ### Added
