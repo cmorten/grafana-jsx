@@ -1,5 +1,11 @@
 # ChangeLog
 
+## [1.2.3] - 27-04-2020
+
+### Added
+
+- Added `rollup-plugin-terser` for bundle minification.
+
 ## [1.2.2] - 26-04-2020
 
 ### Updated
