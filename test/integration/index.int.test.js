@@ -1,4 +1,3 @@
-/** @jsx createObject */
 import {
   Annotation,
   Annotations,
@@ -7,7 +6,6 @@ import {
   Panel,
   Templates,
   Template,
-  createObject,
   Row,
 } from "../../src";
 

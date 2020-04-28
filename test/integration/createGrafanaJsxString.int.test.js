@@ -1,5 +1,3 @@
-/** @jsx createObject */
-
 import {
   Annotation,
   Annotations,
@@ -14,7 +12,6 @@ import {
   Time,
   TimePicker,
   createGrafanaJsxString,
-  createObject,
 } from "../../src";
 
 describe("Integration: createGrafanaJsxString", () => {

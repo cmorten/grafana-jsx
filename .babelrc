@@ -1,3 +1,30 @@
 {
-  "presets": ["@babel/preset-env"]
+  "presets": ["@babel/preset-env"],
+  "plugins": [
+    [
+      "@babel/plugin-transform-react-jsx",
+      {
+        "pragma": "jsx",
+        "pragmaFrag": "jsxFrag"
+      }
+    ],
+    [
+      "babel-plugin-jsx-pragmatic",
+      {
+        "module": "json-jsx",
+        "import": "jsx",
+        "export": "createObject"
+      },
+      "jsx"
+    ],
+    [
+      "babel-plugin-jsx-pragmatic",
+      {
+        "module": "json-jsx",
+        "import": "jsxFrag",
+        "export": "Fragment"
+      },
+      "jsxFrag"
+    ]
+  ]
 }
