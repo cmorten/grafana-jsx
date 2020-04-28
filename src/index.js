@@ -11,7 +11,11 @@ import Templates from "./Templates";
 import Time from "./Time";
 import TimePicker from "./TimePicker";
 import createGrafanaJsxString from "./createGrafanaJsxString";
-import { createObject, Fragment } from "./jsxJson";
+
+/**
+ * Re-exported from `json-jsx` for ease.
+ */
+import { createObject, Fragment } from "json-jsx";
 
 export {
   Annotation,

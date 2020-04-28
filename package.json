@@ -1,6 +1,6 @@
 {
   "name": "grafana-jsx",
-  "version": "1.2.3",
+  "version": "1.3.0",
   "description": "JSX library for creating JSON for Grafana.",
   "main": "lib/index.es5.js",
   "module": "lib/index.js",
@@ -32,6 +32,7 @@
     "prepublishOnly": "yarn ci"
   },
   "dependencies": {
+    "json-jsx": "^1.0.0",
     "prop-types": "^15.7.2"
   },
   "devDependencies": {

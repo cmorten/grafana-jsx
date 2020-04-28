@@ -1,5 +1,11 @@
 # ChangeLog
 
+## [1.3.0] - 28-04-2020
+
+### Updated
+
+- Migrated JSON JSX logic into new package [json-jsx](https://github.com/asos-craigmorten/json-jsx).
+
 ## [1.2.3] - 27-04-2020
 
 ### Added
