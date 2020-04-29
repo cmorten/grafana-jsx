@@ -28,6 +28,12 @@ const Annotation = ({
 
 Annotation.PropTypes = {
   builtIn: PropTypes.oneOf([0, 1]),
+  datasource: PropTypes.string,
+  enable: PropTypes.bool,
+  hide: PropTypes.bool,
+  iconColor: PropTypes.string,
+  name: PropTypes.string,
+  type: PropTypes.string,
 };
 
 export default Annotation;

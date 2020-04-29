@@ -3549,10 +3549,10 @@ jsesc@~0.5.0:
   resolved "https://registry.yarnpkg.com/jsesc/-/jsesc-0.5.0.tgz#e7dee66e35d6fc16f710fe91d5cf69f70f08911d"
   integrity sha1-597mbjXW/Bb3EP6R1c9p9w8IkR0=
 
-json-jsx@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/json-jsx/-/json-jsx-1.0.0.tgz#496ea8052c32ca7f56518372013e2fc2149b36f0"
-  integrity sha512-6lS9S7Z6T8K5Vc2ICHDViAzse75SrTXf1g/okAfa5eJJbg8q2xRE87Ja+f8zH3ZyxPuqpPgRxQH2pB/XsiCc+w==
+json-jsx@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/json-jsx/-/json-jsx-1.0.1.tgz#8bcf7d6358de83ae2efebd9232db4d45d3bd24da"
+  integrity sha512-H7xlxgkb/xwrjYu6T0owFmEqzHfHwJQNqGOTFGYQ3IaiBNGGPe671Rdn9XAdShHI2ydr66yoOZBcjx+Yc6qKFQ==
   dependencies:
     prop-types "^15.7.2"
 

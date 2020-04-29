@@ -1,5 +1,17 @@
 # ChangeLog
 
+## [1.3.1] - 29-04-2020
+
+### Added
+
+- Type definitions for main package exports.
+
+### Updated
+
+- `json-jsx` package to `1.0.1`.
+- Moved to NPM registry everywhere.
+- Annotation PropTypes to fill in missing entries.
+
 ## [1.3.0] - 28-04-2020
 
 ### Updated
